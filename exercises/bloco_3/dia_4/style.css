@@ -28,7 +28,7 @@ body {
 }
 
 nav li a:hover {
-    color: rgb(65, 65, 65);
+    color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -49,6 +49,7 @@ h2 {
     /* color: rgb(172, 172, 172); */
     margin-top: 140px;
     text-align: justify;
+    margin-bottom: 40px;
 }
 
 #nome {
@@ -83,8 +84,15 @@ h2 {
 
 footer {
     text-align: center;
-    /* color: rgb(206, 214, 221); */
+    color: rgb(206, 214, 221);
     font-size: 13px;
+    background-color: rgb(29, 29, 29);
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0px;
 }
 
 aside a {
