@@ -1,14 +1,14 @@
-let a = 5;
-let b = 5;
-let c = 3;
+let a = 2;
+let b = 6;
+let c = 5;
 
-if ((a % 2) == 0) {
+if ((a % 2) > 0) {
     console.log(true)
 }
-else if ((b % 2) == 0) {
+else if ((b % 2) > 0) {
     console.log(true)
 }
-else if ((c % 2) == 0) {
+else if ((c % 2) > 0) {
     console.log(true)
 }
 else {
