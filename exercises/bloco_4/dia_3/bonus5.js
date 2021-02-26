@@ -1,4 +1,4 @@
-let n = 7;
+let n = 11;
 let linha = '';
 
 for (let i = ((n - 1) / 2); i >= 0; i--){
