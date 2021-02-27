@@ -3,6 +3,6 @@ let linha = ''
 
 
 for (let index = 1; index <= n; index++) {
-    linha = linha + '*'
+    linha = linha + '* '
     console.log(linha)
 }

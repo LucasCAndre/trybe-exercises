@@ -10,6 +10,7 @@ let diferencaColumn = queenColumnPosition - opponentColumnPosition
 
 let succesfulAttack = false
 
+
 if (diferencaColumn === diferencaRow || diferencaColumn === (-1 * diferencaRow)) {
      succesfulAttack = true
 }

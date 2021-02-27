@@ -1,7 +1,7 @@
-let n = 347
+let n = 13
 let divisores = 0
 
-for (let index = 2; index < n/2; index++) {
+for (let index = 2; index <= n/2; index++) {
     if (n % index === 0) {
         divisores = divisores + 1
     }
