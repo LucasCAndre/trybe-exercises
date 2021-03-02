@@ -7,12 +7,11 @@ let opponentColumnPosition = 5;
 let diferencaRow = queenRowPosition - opponentRowPosition;
 let diferencaColumn = queenColumnPosition - opponentColumnPosition
 
-
 let succesfulAttack = false
 
 
 if (diferencaColumn === diferencaRow || diferencaColumn === (-1 * diferencaRow)) {
-     succesfulAttack = true
+    succesfulAttack = true
 }
 
 if (succesfulAttack === true && diferencaRow > 0 && diferencaColumn > 0) {
