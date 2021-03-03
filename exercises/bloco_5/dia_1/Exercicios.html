@@ -39,11 +39,15 @@
       </div>
     </div>
     <script>
-        document.getElementsByTagName('p')[0].innerText = 'Daqui a dois anos eu me vejo trabalhando em uma empresa internacional como desenvolvedor web';
+        let str = document.getElementsByTagName('p');
+        str[0].innerText = 'Daqui a dois anos eu me vejo trabalhando em uma empresa internacional como desenvolvedor web';
         document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
         document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
         document.getElementsByTagName('h1')[0].innerText = 'JavaScript';
-        
+        str[0].innerText = str[0].innerText.toUpperCase();
+        for (index = 0; index < str.length; index += 1) {
+            console.log(str[index].innerText)
+        };
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
