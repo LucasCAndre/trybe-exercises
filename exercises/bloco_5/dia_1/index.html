@@ -2,9 +2,9 @@
 <html>
   <body>
     <h2 id="page-title">Título</h2>
-    <p id="paragraph">Dê uma cor para este parágrafo!</p>
+    <p id="paragraph" class="p">Dê uma cor para este parágrafo!</p>
     <h4 id="subtitle">Subtítulo</h4>
-    <p id="second-paragraph">Segundo parágrafo!</p>
+    <p id="second-paragraph" class="p">Segundo parágrafo!</p>
 
     <script>
       var paragraph = document.getElementById("paragraph");
@@ -16,6 +16,14 @@
       var secondp = document.getElementById('second-paragraph');
       secondp.innerText = 'A lenda perdida'
       secondp.style.fontSize = '90px'
+      var p = document.getElementsByClassName('p');
+      for (let i = 0; i < p.length; i += 1) {
+        p[i].style.backgroundColor = 'gray'
+      }
+      p[0].style.color = 'white'
+      var subt = document.getElementsByTagName('h4');
+      subt[0].style.fontFamily = 'sans'
+      subt[0].style.marginLeft = '90px'
     </script>
   </body>
 </html>
