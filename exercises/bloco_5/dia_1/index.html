@@ -7,23 +7,23 @@
     <p id="second-paragraph" class="p">Segundo parágrafo!</p>
 
     <script>
-      var paragraph = document.getElementById("paragraph");
+      var paragraph = document.querySelector("#paragraph");
       paragraph.style.color = "red";
-      document.getElementById('page-title').innerText = 'Osenhor dos Aneis - O Retorno do Rei'
-      var subtit = document.getElementById('subtitle');
+      document.querySelector('#page-title').innerText = 'Osenhor dos Aneis - O Retorno do Rei'
+      var subtit = document.querySelector('#subtitle');
       subtit.style.backgroundColor = 'blue'
       subtit.innerText = 'Agora vai'
-      var secondp = document.getElementById('second-paragraph');
+      var secondp = document.querySelector('#second-paragraph');
       secondp.innerText = 'A lenda perdida'
       secondp.style.fontSize = '90px'
-      var p = document.getElementsByClassName('p');
+      var p = document.querySelectorAll('p');
       for (let i = 0; i < p.length; i += 1) {
         p[i].style.backgroundColor = 'gray'
       }
       p[0].style.color = 'white'
-      var subt = document.getElementsByTagName('h4');
-      subt[0].style.fontFamily = 'sans'
-      subt[0].style.marginLeft = '90px'
+      var subt = document.querySelector('h4');
+      subt.style.fontFamily = 'sans'
+      subt.style.marginLeft = '90px'
     </script>
   </body>
 </html>
