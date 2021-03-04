@@ -19,6 +19,10 @@
     document.querySelector('#elementoOndeVoceEsta').nextSibling;
     document.querySelector('#elementoOndeVoceEsta').nextElementSibling.innerHTML = 'terceiro filho'
     document.querySelector('#pai').childNodes[5].style.color = 'blue'
-
+    let createDiv = document.createElement('div');
+    let irmaoElementoOndeVoceEsta = document.querySelector('#pai').appendChild(createDiv);
+    let filhoElementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta').appendChild(createDiv);
+    let filhoDoPrimeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho').appendChild(createDiv);
+    filhoDoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
  </script>
 </body>
