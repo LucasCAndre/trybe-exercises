@@ -57,7 +57,21 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+      let tagTitulo = document.createElement('h1');
+      document.querySelector('body').appendChild(tagTitulo).innerText = 'Exercício 5.2';
+      tagTitulo.className = 'tituloPrincipal';
+      let tagDiv = document.createElement('div');
+      document.querySelector('body').appendChild(tagDiv);
+      tagDiv.className = 'main-content';
+      let divCenter = document.createElement('div');
+      document.querySelector('.main-content').appendChild(divCenter);
+      divCenter.className = 'center-content';
+      let tagP = document.createElement('p');
+      document.querySelector('.center-content').appendChild(tagP).innerText = 'Vamos com tudo';
+      let divLeft = document.createElement('div');
+      document.querySelector('.main-content').appendChild(divLeft);
+      divLeft.className = 'left-content';
+
     </script>
   </body>
 </html>
