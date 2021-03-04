@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="p">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="p">Segundo parágrafo!</p>
+
+    <script>
+      var paragraph = document.querySelector("#paragraph");
+      paragraph.style.color = "red";
+      document.querySelector('#page-title').innerText = 'Osenhor dos Aneis - O Retorno do Rei'
+      var subtit = document.querySelector('#subtitle');
+      subtit.style.backgroundColor = 'blue'
+      subtit.innerText = 'Agora vai'
+      var secondp = document.querySelector('#second-paragraph');
+      secondp.innerText = 'A lenda perdida'
+      secondp.style.fontSize = '90px'
+      var p = document.querySelectorAll('p');
+      for (let i = 0; i < p.length; i += 1) {
+        p[i].style.backgroundColor = 'gray'
+      }
+      p[0].style.color = 'white'
+      var subt = document.querySelector('h4');
+      subt.style.fontFamily = 'sans'
+      subt.style.marginLeft = '90px'
+    </script>
+  </body>
+</html>
