@@ -71,6 +71,24 @@
       let divLeft = document.createElement('div');
       document.querySelector('.main-content').appendChild(divLeft);
       divLeft.className = 'left-content';
+      let divRight = document.createElement('div');
+      document.querySelector('.main-content').appendChild(divRight);
+      divRight.className = 'right-content';
+      let tagImg = document.createElement('img');
+      document.querySelector('.left-content').appendChild(tagImg);
+      tagImg.className = 'small-image';
+      tagImg.src = 'https://picsum.photos/200';
+      let tagOl = document.createElement('ol');
+      document.querySelector('.right-content').appendChild(tagOl);
+      tagOl.className = 'ordered-list';
+      let arr = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let index = 0; index < arr.length; index += 1) {
+        let listItem = document.createElement('li');
+        document.querySelector('.ordered-list').appendChild(listItem).innerText = arr[index]
+        listItem.className = 'list-item'
+      }
+      
+
 
     </script>
   </body>
