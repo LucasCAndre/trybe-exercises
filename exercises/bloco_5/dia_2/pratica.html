@@ -1,0 +1,36 @@
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+            <div id="primeiroFilho"></div>
+            <div id="elementoOndeVoceEsta">
+                <div id="primeiroFilhoDoFilho"></div>
+                <div id="segundoEUltimoFilhoDoFilho"></div>
+            </div>
+            Atenção!
+            <div id="terceiroFilho"></div>
+            <div id="quartoEUltimoFilho"></div>
+        </div>
+</div>
+<script id="script">
+    document.querySelector('#elementoOndeVoceEsta').parentNode.style.color = 'red';
+    document.querySelector('#primeiroFilhoDoFilho').innerHTML = 'Preste muuuita atenção!';
+    document.querySelector('#pai').firstElementChild.innerHTML = 'primeiro filho';
+    document.querySelector('#elementoOndeVoceEsta').previousElementSibling.innerHTML = 'primeiro filho denovo';
+    document.querySelector('#elementoOndeVoceEsta').nextSibling;
+    document.querySelector('#elementoOndeVoceEsta').nextElementSibling.innerHTML = 'terceiro filho'
+    document.querySelector('#pai').childNodes[5].style.color = 'blue'
+    let createDiv1 = document.createElement('div');
+    let createDiv2 = document.createElement('div');
+    let createDiv = document.createElement('div');
+    let irmaoElementoOndeVoceEsta = document.querySelector('#pai').appendChild(createDiv);
+    let filhoElementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta').appendChild(createDiv1);
+    let filhoDoPrimeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho').appendChild(createDiv2);
+    filhoDoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
+    document.querySelector('#primeiroFilho').innerHTML = 'primeiro filho'
+    document.querySelector('#pai').removeChild(primeiroFilho);
+    document.querySelector('#elementoOndeVoceEsta').removeChild(segundoEUltimoFilhoDoFilho);
+    document.querySelector('#pai').removeChild(terceiroFilho);
+    document.querySelector('#pai').removeChild(quartoEUltimoFilho);
+
+ </script>
+</body>
