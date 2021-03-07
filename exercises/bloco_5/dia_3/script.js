@@ -105,4 +105,14 @@ function taskColor(cor){
 
 taskColor('purple');
 
+function changeClass() {
+  if (event.target.className === 'task') {
+    event.target.className = 'task selected'
+  } else if (event.target.className === 'task selected') {
+    event.target.className = 'task'
+  }
+}
+
+document.querySelector('.my-tasks').addEventListener('click', changeClass);
+
 
