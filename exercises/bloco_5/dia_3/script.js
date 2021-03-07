@@ -78,7 +78,7 @@ function setText() {
 document.querySelector('#btn-friday').addEventListener('click', setText);
 
 function zoomDay() {
-  event.target.style.fontSize = '35px';
+  event.target.style.fontSize = '28px';
 }
 
 function normalSizeFont() {
@@ -115,4 +115,14 @@ function changeClass() {
 
 document.querySelector('.my-tasks').addEventListener('click', changeClass);
 
+function dayColor() {
+  let taskSelectedColor = document.querySelector('.selected').style.backgroundColor;
+  if (event.target.style.color === taskSelectedColor) {
+    event.target.style.color = 'rgb(119,119,119)';
+  } else {
+    event.target.style.color = taskSelectedColor
+  }
+}
+
+days.addEventListener('click', dayColor);
 
