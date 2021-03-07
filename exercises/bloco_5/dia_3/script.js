@@ -88,4 +88,21 @@ function normalSizeFont() {
 document.querySelector('#days').addEventListener('mouseover', zoomDay);
 document.querySelector('#days').addEventListener('mouseout', normalSizeFont);
 
+function taskEvent(task) {
+  let tagSpam = document.createElement('span');
+  tagSpam.innerText = task;
+  document.querySelector('.my-tasks').appendChild(tagSpam);
+}
+
+taskEvent('Cozinhar');
+
+function taskColor(cor){
+  let divTag = document.createElement('div');
+  divTag.className = 'task';
+  divTag.style.backgroundColor = cor;
+  document.querySelector('.my-tasks').appendChild(divTag);
+}
+
+taskColor('purple');
+
 
