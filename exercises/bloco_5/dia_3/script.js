@@ -37,18 +37,55 @@ tagBtn.innerText = 'Feriados'
 tagBtn.id = 'btn-holiday'
 let holidayButton = document.querySelector('.buttons-container').appendChild(tagBtn);
 
-let newColor = 'lightyellow'
-let oldColor = 'rgb(238,238,238)'
-
 function setColor() {
   let holi = document.querySelectorAll('.holiday');
   for (let i = 0; i < holi.length; i += 1) {
-    if (holi[i].style.backgroundColor === newColor ){
-      holi[i].style.backgroundColor = oldColor
+    if (holi[i].style.backgroundColor === 'lightyellow' ){
+      holi[i].style.backgroundColor = 'rgb(238,238,238)'
     } else {
-      holi[i].style.backgroundColor = newColor
+      holi[i].style.backgroundColor = 'lightyellow'
     }
   }
 }
 
 holidayButton.addEventListener('click', setColor);
+
+function fridayBt(str) {
+  let btnTag = document.createElement('button');
+  btnTag.innerText = str;
+  btnTag.id = 'btn-friday';
+  document.querySelector('.buttons-container').appendChild(btnTag);
+}
+
+fridayBt('Sexta-Feira');
+
+let fridayDays = document.querySelectorAll('.friday');
+  let innerTxtFriday = []
+  for (i = 0; i < fridayDays.length; i += 1) {
+    innerTxtFriday.push(fridayDays[i].innerText)
+  };
+
+function setText() {
+  for (let index = 0; index < fridayDays.length ; index += 1) {
+    if (fridayDays[index].innerText === 'TGI-F') {
+      fridayDays[index].innerText = innerTxtFriday[index];
+    } else {
+      fridayDays[index].innerText = 'TGI-F';
+    }
+  }
+}
+
+document.querySelector('#btn-friday').addEventListener('click', setText);
+
+function zoomDay() {
+  event.target.style.fontSize = '35px';
+}
+
+function normalSizeFont() {
+  event.target.style.fontSize = '20px';
+}
+
+document.querySelector('#days').addEventListener('mouseover', zoomDay);
+document.querySelector('#days').addEventListener('mouseout', normalSizeFont);
+
+
