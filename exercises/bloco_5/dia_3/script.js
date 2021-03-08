@@ -126,3 +126,24 @@ function dayColor() {
 
 days.addEventListener('click', dayColor);
 
+function addTask() {
+  tagSpan = document.createElement('span');
+  document.querySelector('.my-tasks').appendChild(tagSpan);
+  if (document.querySelector('#task-input').value === '') {
+    alert('Caixa de texto vazia');
+  } else {
+    tagSpan.innerText = document.querySelector('#task-input').value;
+  }
+}
+
+document.querySelector('#btn-add').addEventListener('click', addTask);
+document.querySelector('input').onkeypress = 'pressEnter(event)';
+
+function pressEnter(event) {
+  let x = event.keyCode;
+  tagSpan = document.createElement('span');
+  document.querySelector('.my-tasks').appendChild(tagSpan);
+  if (x == 13) {
+    tagSpan.innerText = document.querySelector('#task-input').value;
+  }
+}
