@@ -143,7 +143,7 @@ function pressEnter(event) {
   let x = event.keyCode;
   tagSpan = document.createElement('span');
   document.querySelector('.my-tasks').appendChild(tagSpan);
-  if (x == 13) {
+  if (x === 13) {
     tagSpan.innerText = document.querySelector('#task-input').value;
   }
 }
