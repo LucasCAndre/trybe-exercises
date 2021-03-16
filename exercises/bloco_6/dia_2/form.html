@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
+    <script src="dist/js/DatePickerX.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
+  </head>
+  <body style="text-align: center;">
+    <div id='header' class="page-header">
+      <h1>Formulário Currículo</h1>
+    </div>
+    <form id="formulario" action="">
+      <fieldset class='fieldset'>
+        <legend>Dados Pessoais</legend>
+        <br>
+        <div>
+          <label for="name-input">Digite seu nome:
+            <input class="form-control" type="text" name="nome:" id="name-input" maxlength="40" required placeholder="nome"/>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label for="email-input">Digite seu e-mail:
+            <input data-validate-field="email" class="form-control" type="text" name="email" id="email-input" maxlength="50" required placeholder="e-mail"/>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label for="cpf-input">CPF:
+            <input class="form-control" type="text" name="cpf:" id="cpf-input" maxlength="11" required>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label for="adress-input">Endereço:
+            <input class="form-control" type="text" name="endereço:" maxlength="200" id="adress-input" required>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label for="city-input">Cidade:
+            <input class="form-control" type="text" name="cidade:" id="city-input" maxlength="28" required>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label for="estados">Estado:</label>
+          <select class="form-control" name="estado onde mora:" id="estados"></select>
+        </div>
+          <br>
+        <fieldset class="fieldset">
+          <legend>Tipo de Residência</legend>
+          <div>
+            <label for="casa">Casa
+              <input type="radio" id="casa" name="residencia">
+            </label>
+            <label for="apartamento">Apartamento
+              <input type="radio" id="apartamento" name="residencia">
+            </label>
+          </div>
+        </fieldset>
+      </fieldset>
+      <br>
+      <fieldset class="fieldset">
+        <legend>Último Emprego</legend>
+        <br>
+        <div>
+          <label for="resumo-curriculo">
+            <textarea class="form-control" name="resumo curriculo:" id="resumo-curriculo" cols="30" rows="8" required maxlength="1000" placeholder="Escreva aqui um resumo de seu currículo. 1000 caracteres"></textarea>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label for="cargo">Cargo:
+            <input class="form-control" type="text" id="cargo" name="cargo ultimo emprego:" required>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label for="descricao-cargo">Descreva o cargo:
+            <input class="form-control" type="text" name="descriçao do cargo" id="descricao-cargo" maxlength="500" required>
+          </label>
+        </div>
+        <br>
+        <div>
+          <label for="start-date">Data de inicio:
+            <input class="form-control" type="text" name="data de inicio" id="start-date" required>
+          </label>
+        </div>
+      </fieldset>
+      <br>
+      <button class="btn-primary" id="gerar-curriculo">Gerar Currículo</button>
+    </form>
+    <div id="curriculum"></div>
+  </body>
+  <script src="script.js"></script>
+</html>
