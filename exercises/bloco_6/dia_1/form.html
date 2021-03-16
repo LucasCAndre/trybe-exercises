@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div id='header'>
+    <header>
+      <h1>Formulário Currículo</h1>
+    </header>
+    </div>
+    <form id="formulario" action="">
+      <fieldset class='fieldset'>
+        <legend>Dados Pessoais</legend>
+        <br>
+        <label for="name-input">Digite seu nome:
+          <input type="text" name="nome:" id="name-input" maxlength="40" required placeholder="nome"/>
+        </label>
+        <br><br>
+        <label for="email-input">Digite seu e-mail:
+          <input type="email" name="E-mail:" id="email-input" maxlength="50" required placeholder="e-mail"/>
+        </label>
+        <br><br>
+        <label for="cpf-input">CPF:
+          <input type="text" name="cpf:" id="cpf-input" maxlength="11" required>
+        </label>
+        <br><br>
+        <label for="adress-input">Endereço:
+          <input type="text" name="endereço:" maxlength="200" id="adress-input" required>
+        </label>
+        <br><br>
+        <label for="city-input">Cidade:
+          <input type="text" name="cidade:" id="city-input" maxlength="28" required>
+        </label>
+        <br><br>
+        <label for="estados">Estado:</label>
+        <select name="estado onde mora:" id="estados"></select>
+        <br><br>
+        <fieldset class="fieldset">
+          <legend>Tipo de Residência</legend>
+          <label for="casa">Casa
+            <input type="radio" id="casa" name="residencia">
+          </label>
+          <label for="apartamento">Apartamento
+            <input type="radio" id="apartamento" name="residencia">
+          </label>
+        </fieldset>
+        </fieldset>
+        <br>
+        <fieldset class="fieldset">
+          <legend>Último Emprego</legend>
+          <br>
+          <label for="resumo-curriculo">
+            <textarea name="resumo curriculo:" id="resumo-curriculo" cols="30" rows="8" required maxlength="1000" placeholder="Escreva aqui um resumo de seu currículo. 1000 caracteres"></textarea>
+          </label>
+          <br><br>
+          <label for="cargo">Cargo:
+            <input type="text" id="cargo" name="cargo ultimo emprego:" required>
+          </label>
+          <br><br>
+          <label for="descricao-cargo">Descreva o cargo:
+            <input type="text" name="descriçao do cargo" id="descricao-cargo" maxlength="500" required>
+          </label>
+          <br><br>
+          <label for="start-date">Data de inicio:
+            <input type="date" name="data de inicio" id="start-date" required>
+          </label>
+        </fieldset>
+        <br>
+      </form>
+      <button id="gerar-curriculo">Gerar Currículo</button>
+      <div id="curriculum"></div>
+  </body>
+  <script src="script.js"></script>
+</html>
