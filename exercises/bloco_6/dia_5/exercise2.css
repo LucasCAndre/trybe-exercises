@@ -12,7 +12,15 @@ nav ul {
   display: flex;
 }
 
-nav ul li {
+nav ul li:nth-child(1) {
+  flex-grow: 5;
+}
+
+nav ul li:nth-child(2) {
+  flex-grow: 5;
+}
+
+nav ul li:nth-child(3) {
   flex-grow: 1;
 }
 
@@ -70,7 +78,37 @@ hr {
 }
 
 @media screen and (min-width: 450px) {
+
+  header p {
+    font-size: 30px;
+  }
+
+  nav ul {
+    font-size: 20px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  .aside-one , .aside-two {
+    font-size: 17px;
+  }
+
+  .aside-one ul, .aside-two ul {
+    margin-left: 70px;
+  }
+
+  .main-content p {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 640px) {
   body {
     background-color: red;
   }
+
+  
 }
