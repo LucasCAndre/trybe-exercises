@@ -1,6 +1,6 @@
 body {
   font-size: large;
-  margin: 0 15px
+  margin: 15px
 }
 h1 {
   font-size: xx-large;
@@ -11,9 +11,40 @@ h2 {
 
 img {
     max-width: 100%;
-    margin-bottom: 25px;
 }
 
 figure {
-    margin: 0;
+    margin-bottom: 25px;
+}
+
+.img-container {
+  margin: auto;
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    width: 80%;
+    background-color: rgb(199, 199, 199);
+    font-size: larger;
+    margin: auto
+  }
+
+  .img1 {
+    display: flex;
+  }
+
+  .img2 {
+    display: flex;
+  }
+
+}
+
+@media screen and (min-width: 1250px) {
+  body {
+    background-color: gray;
+    font-size: x-large;
+    width: 75%;
+    max-width: 1400px;
+  }
+
 }
