@@ -106,9 +106,55 @@ hr {
 }
 
 @media screen and (min-width: 640px) {
-  body {
-    background-color: red;
+
+  .aside-one ul {
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    flex-flow: column wrap;
+    height: 120px;
+    justify-content: center;
+    align-content:center
   }
 
-  
+  .aside-two ul {
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    flex-flow: column wrap;
+    height: 60px;
+    align-content: center;
+  }
+
+  .aside-two ul li , .aside-one ul li {
+    margin-left: 45px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header nav ul {
+    font-size: 15px;
+    display: flex;
+  }
+
+  header nav {
+    flex-grow: 10;
+  }
+
+  header p {
+    font-size: 25px;
+    flex-grow: 5;
+  }
+
+  .main-content {
+    width: 70%;
+  }
+
+  footer  p {
+    width: 90%;
+  }
 }
