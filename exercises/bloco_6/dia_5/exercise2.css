@@ -1,0 +1,160 @@
+html {
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li:nth-child(1) {
+  flex-grow: 5;
+}
+
+nav ul li:nth-child(2) {
+  flex-grow: 5;
+}
+
+nav ul li:nth-child(3) {
+  flex-grow: 1;
+}
+
+header p {
+  font-size: 23px;
+  text-align: center;
+}
+
+header {
+  background-color: rgb(19, 19, 19);
+  color: rgb(223, 223, 223) !important;
+  padding: 4px;
+}
+
+h2 {
+  font-size: 19px;
+  text-align: center;
+}
+
+.main-content {
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  margin: auto auto 0 auto;
+  background-color: rgb(26, 26, 26);
+  color: rgb(238, 238, 238);
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+
+footer p {
+  margin: 0 auto;
+  width: 85%;
+  text-align: justify;
+}
+
+footer h3 {
+  text-align: center;
+}
+
+hr {
+  width: 60%;
+  border: groove 1px rgb(87, 87, 87);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 450px) {
+
+  header p {
+    font-size: 30px;
+  }
+
+  nav ul {
+    font-size: 20px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  .aside-one , .aside-two {
+    font-size: 17px;
+  }
+
+  .aside-one ul, .aside-two ul {
+    margin-left: 70px;
+  }
+
+  .main-content p {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+
+  .aside-one ul {
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    flex-flow: column wrap;
+    height: 120px;
+    justify-content: center;
+    align-content:center
+  }
+
+  .aside-two ul {
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    flex-flow: column wrap;
+    height: 60px;
+    align-content: center;
+  }
+
+  .aside-two ul li , .aside-one ul li {
+    margin-left: 45px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header nav ul {
+    font-size: 15px;
+    display: flex;
+  }
+
+  header nav {
+    flex-grow: 10;
+  }
+
+  header p {
+    font-size: 25px;
+    flex-grow: 5;
+  }
+
+  .main-content {
+    width: 70%;
+  }
+
+  footer  p {
+    width: 90%;
+  }
+}
