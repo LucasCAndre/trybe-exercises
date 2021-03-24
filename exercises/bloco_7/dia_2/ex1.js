@@ -34,6 +34,7 @@ const order = {
     },
   };
 
+  console.log(Object.keys(order));
   console.log(Object.keys(order.order.pizza));
   
   const customerInfo = (order) => {
@@ -55,3 +56,4 @@ const order = {
   }
   
   orderModifier(order);
+
