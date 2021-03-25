@@ -1,7 +1,7 @@
 const removeVowels = (word) => {
   const characters = word.split('');
   let results = '';
-
+  let vowelNum = 1
   for (let index = 0; index < characters.length; index += 1) {
     if (
       characters[index] === 'a' ||
@@ -10,7 +10,8 @@ const removeVowels = (word) => {
       characters[index] === 'e' ||
       characters[index] === 'u'
     ) {
-      results = `${results}${index}`
+      results = `${results}${vowelNum}`
+      vowelNum += 1;
     } else {
       results = `${results}${characters[index]}`
     }
