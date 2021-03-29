@@ -67,8 +67,10 @@ const gameActions = {
     this.warriorTurn();
     this.mageTurn();
     this.dragonTurn();
-    console.log(battleMembers);
-  }
+    return battleMembers;
+  },
 };
 
-console.log(gameActions.finalResult());
+while (dragon.healthPoints > 0) {
+  console.log(gameActions.finalResult());
+}
