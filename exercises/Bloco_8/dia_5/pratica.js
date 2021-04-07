@@ -1,11 +1,5 @@
-// Faça uma lista com as suas frutas favoritas
-const specialFruit = ['pera', 'uva', 'maçã'];
-
-// Faça uma lista de complementos que você gostaria de adicionar
-const additionalItens = ['maionese', 'limao', 'vinagre'];
-
-const fruitSalad = (fruit, additional) => {
-  return [...fruit, ...additional]
+const multiply = (number, value = 1) => {
+  return number * value
 };
 
-console.log(fruitSalad(specialFruit, additionalItens));
+console.log(multiply(8, 3));
