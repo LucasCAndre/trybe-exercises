@@ -19,7 +19,13 @@ const fetchPromise = () => {
     } else {
       reject(arrSum)
     }
-  }).then((respon) => console.log(`Promise resolvida: ${[respon / 2, respon / 3, respon / 5, respon / 10]}`))
+  }).then((respon) => {
+    console.log([respon / 2, respon / 3, respon / 5, respon / 10])
+    return [respon / 2, respon / 3, respon / 5, respon / 10]
+  })
+  .then((resp) => {
+    console.log(resp.reduce((acc, cur) => acc + cur))
+  })
   .catch((error) => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`));
 };
 
