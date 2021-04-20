@@ -13,6 +13,8 @@ describe('Scoped / Nested block', () => {
 '1 - beforEach'
 '1 - test'
 '1 - afterEach'
+'1 - beforEach'
 '2 - beforEach'
 '2 - test'
 '2 - afterEach'
+'1 - afterEach'
