@@ -10,5 +10,10 @@ test('Defina o retorno padrão como 10.Teste se a função foi chamada, qual seu
 
   dados.randomNum.mockImplementation((a, b) => a / b);
   expect(dados.randomNum(20, 10)).toBe(2);
+  expect(dados.randomNum(30, 5)).toBe(6);
+  dados.randomNum.mockReset();
+  expect(dados.randomNum).toHaveBeenCalledTimes(0);
+  expect(dados.randomNum(20, 10)).toBe(undefined);
 })
+
 
