@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.pokemon {
+  text-align: center;
+  background-color: #61fb8f;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
