@@ -11,6 +11,7 @@ function App() {
         <Pokemon key={poke.id} pokemon={poke}></Pokemon>
         )}
       </div>
+      <footer className='foot'>Developed by Lucas André/2021</footer>
     </div>
   );
 }
