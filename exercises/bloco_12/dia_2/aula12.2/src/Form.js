@@ -1,65 +1,43 @@
-import React, { Component } from 'react'
-import './Form.css'
-import EstadoFavorito from './EstadoFavorito';
+import React from 'react';
+import PersonalData from './Personaldata';
 
-class Form extends Component {
+class Form extends React.Component {
   constructor() {
-    super();
+    super()
 
-    this.handleChange = this.handleChange.bind(this);
-    this.fileInput = React.createRef();
+    this.handleData = this.handleData.bind(this);
 
     this.state = {
-    };
+      nameError: '',
+      name: '',
+      emailError: '',
+      email: '',
+    }
   }
 
-
-  handleChange(event) {
-    const name = event.target.name
-    const value = event.target.type === 'chekbox' ? event.target.checked : event.target.value
-    this.setState({
-      [name]: value,
-    });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    alert(
-      `Selected file - ${this.fileInput.current.files[0].name}`
-    );
+  handleData(event) {
+    const name = event.target.name;
+    const value = event.target.value;
+    if (name === 'name' && value.length > 40) {
+      return (this.setState({nameError: 'Máximo de 40 caracteres'}))
+    } else {
+      this.setState({nameError: ''})
+    }
+    if (name === 'email' && value.length > 50) {
+      return (this.setState({emailError: 'Máximo de 50 caracteres'}))
+    } else {
+      this.setState({emailError: ''})
+    }
+    return (this.setState({[name]: value,}))
   }
 
   render() {
     return (
       <div>
-        <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
-        <form className="form">
-          <EstadoFavorito value={this.state.estadoFavorito} handleChange={this.handleChange}/>
-          <fieldset>
-            <legend>Dados Pessoais</legend>
-            <input
-              onChange={this.handleChange}
-              type="text"
-              name="nome"
-              />
-            <input
-              onChange={this.handleChange}
-              type="number"
-              name="idade"
-              />
-            </fieldset>
-          <input
-            onChange={this.handleChange}
-            type="checkbox"
-            name="vaiComparecer"
-          />
-          <label>
-          Upload file:
-          <input type="file" ref={this.fileInput} />
-        </label>
-        </form>
+        <header><h1>Currículo</h1></header>
+        <PersonalData estado={this.state} handleData={this.handleData}/>
       </div>
-    );
+    )
   }
 }
 
