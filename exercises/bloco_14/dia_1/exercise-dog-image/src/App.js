@@ -1,45 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: null,
-      dogList: [],
+      email: '',
+      saveEmail: '',
     };
-    this.addDog = this.addDog.bind(this);
-    this.fetchDogImage = this.fetchDogImage.bind(this);
   }
 
-  componentDidMount() {
-    this.fetchDogImage();
+  changeEmail(value) {
+    this.setState({ email: value });
   }
 
-  async fetchDogImage() {
-    const url = 'https://dog.ceo/api/breeds/image/random';
-    const fetchImage = await fetch(url);
-    const dogObj = await fetchImage.json();
-    const imagem = dogObj.message;
-    this.setState({ image: imagem });
-  }
-
-  addDog() {
-    const { dogList, image } = this.state;
-    this.setState({ image: null, dogList: [...dogList, image] });
-    this.fetchDogImage();
+  changeSaveEmail(value) {
+    this.setState({ saveEmail: value, email: '' });
   }
 
   render() {
-    const { image, dogList } = this.state;
+    const { email, saveEmail } = this.state;
     return (
-      <div>
-        <p>Imagem de um Doguinho</p>
-        { image ? <img style={ { width: '250px' } } src={ image } alt="dog" /> : <span>Loading...</span>}
-        <br />
-        {dogList
-          .map((dog, index) => <img style={ { width: '250px' } } key={ index } src={ dog } alt="doguinho" />)}
-        <button type="button" onClick={ this.addDog }>Addog</button>
+      <div className="App">
+        <label htmlFor="id-email">
+          Email
+        </label>
+        <input
+          id="id-email"
+          value={ email }
+          type="email"
+          onChange={ (e) => this.changeEmail(e.target.value) }
+        />
+        <input
+          id="btn-enviar"
+          type="button"
+          data-testid="id-send"
+          value="Enviar"
+          onClick={ () => this.changeSaveEmail(email) }
+        />
+        <input id="btn-id" type="button" value="Voltar" />
+        <h2 data-testid="id-email-user">{`Valor: ${saveEmail}`}</h2>
       </div>
     );
   }
