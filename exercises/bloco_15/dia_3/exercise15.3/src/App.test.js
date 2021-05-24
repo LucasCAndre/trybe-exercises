@@ -1,16 +1,34 @@
-// App.test.js
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react'
-import App from './App';
-it('alterando o valor dos campos e testando o valor guardado', () => {
-  const { getByTestId } = render(<App />);
-  const inputNome = getByTestId('input-nome');
-  expect(inputNome).toHaveValue('');
-  fireEvent.change(inputNome, { target: { value: 'Estudante da Trybe' } });
-  expect(inputNome).toHaveValue('Estudante da Trybe');
+import { fireEvent } from '@testing-library/react';
+import renderWithRouter from './renderWithRouter';
+import App, { About } from './App';
 
-  const inputEmail = getByTestId('input-email');
-  expect(inputEmail).toHaveValue('');
-  fireEvent.change(inputEmail, { target: { value: 'estudante@trybe.com' } });
-  expect(inputEmail).toHaveValue('estudante@trybe.com');
+describe('teste da aplicação toda', () => {
+  it('deve renderizar o componente App', () => {
+    const { getByText } = renderWithRouter(<App />);
+    const home = getByText(/Você está na página Início/);
+    expect(home).toBeInTheDocument();
+  });
+
+  it('deve renderizar o componente Sobre', () => {
+    const { getByText, history } = renderWithRouter(<App />);
+    fireEvent.click(getByText(/Sobre/i));
+    const { pathname } = history.location;
+    expect(pathname).toBe('/about');
+    const aboutAll = getByText(/Você está na página Sobre/);
+    expect(aboutAll).toBeInTheDocument();
+  });
+
+  it('deve testar um caminho não existente e a renderização do Not Found', () => {
+    const { getByText, history } = renderWithRouter(<App />);
+    history.push('/pagina/que-nao-existe/');
+    const noMatch = getByText(/Página não encontrada/i);
+    expect(noMatch).toBeInTheDocument();
+  });
+
+  it('deve renderizar o componente About (apenas componente)', () => {
+    const { getByText } = renderWithRouter(<About />);
+    const aboutOnly = getByText(/Você está na página Sobre/i);
+    expect(aboutOnly).toBeInTheDocument();
+  });
 });
