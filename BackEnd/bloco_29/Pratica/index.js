@@ -27,13 +27,13 @@ const getGradeLetter = (gradeNumber) => {
 const getLetterGrades = ({ name, grade }) => ({
   name,
   grade,
-  letterGrade: getGradeLetter(grade)});
+  letterGrade: getGradeLetter(grade) });
 
 /* "Converter" */
 const percentageGradesIntoLetters = ({ name, disciplines, school }) => ({
   name,
   school,
-  disciplines: disciplines.map(getLetterGrades)});
+  disciplines: disciplines.map(getLetterGrades) });
 
 /* "Determinar" */
 const approvedStudents = ({ disciplines }) =>
